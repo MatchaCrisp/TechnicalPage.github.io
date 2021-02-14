@@ -1,0 +1,25 @@
+
+/*=================hover/active states =============*/
+
+.marHov:hover {
+    background-color:var(--col-mar,maroon);
+    color:var(--col-whi,white);
+}
+/*used by desktop nav a */
+.whiHov:hover {
+    background-color:var(--col-whi,white);
+    color:var(--col-bla,black);
+}
+
+/*used by mobile nav a */
+.graTar:active {
+    background-color:var(--col-darkest,darkgray);
+}
+
+/*used by desktop nav a */
+.marTar:active {
+    background-color:var(--col-mar,maroon);
+}
+/*========================================================*/
+
+

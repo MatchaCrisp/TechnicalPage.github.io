@@ -1,0 +1,33 @@
+/*=================classes for debugging ==============*/
+.invis {
+    display:none;
+}
+
+.bringtotop {
+    z-index:99;
+}
+
+.whibac {
+    background-color:white;
+}
+
+.whitxt {
+    color:white;
+}
+
+.bringtoctr {
+    position:absolute;
+    top:50%;
+    left:50%;
+}
+
+.bringtostr {
+    position:absolute;
+    left:0;
+    top:0;
+}
+
+.markarea {
+    border: solid 1px black;
+}
+/*========================================================*/

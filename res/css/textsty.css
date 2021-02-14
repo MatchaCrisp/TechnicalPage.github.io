@@ -1,0 +1,28 @@
+/*======================text styling=========================*/
+/*indent whole paragraph */
+.indent {
+    margin-left:2rem;
+}
+
+/*full indent of first sentence */
+.tab {
+    text-indent:2rem;
+}
+
+/*half indent of first sentence */
+.halfTab {
+    text-indent:1rem;
+}
+
+/* Used by index introduction*/
+.emphStr {
+    font-size:2.5rem;
+    font-weight:600;
+    text-transform:capitalize;
+}
+
+.signed {
+    text-align:right;
+    text-transform:capitalize;
+}
+/*========================================================*/

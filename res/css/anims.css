@@ -1,0 +1,1014 @@
+
+/*==========animations=========*/
+/*--Used in animation-direction--*/
+@keyframes del_norm {
+    0% {
+        width:10%;
+        left:0%;
+
+    }
+    20% {
+        left:0%;
+        width:10%;
+    }
+    100% {
+        left:90%;
+        width:10%;
+    }
+}
+@keyframes del_rev {
+    0% {
+        left:0%;
+        width:10%;
+
+    }
+    80% {
+        left:90%;
+        width:10%;
+    }
+    100% {
+        left:90%;
+        width:10%;
+    }
+}
+@keyframes del_alt {
+    0% {
+        left:0%;
+        width:10%;
+
+    }
+    10% {
+        left:0%;
+        width:10%;
+    }
+    50% {
+        left:90%;
+        width:10%;
+    }
+    90% {
+        left:0%;
+        width:10%;
+    }
+    100% {
+        left:0%;
+        width:10%;
+    }
+}
+@keyframes del_revalt {
+    0% {
+        left:90%;
+        width:10%;
+
+    }
+    10% {
+        left:90%;
+        width:10%;
+    }
+    50% {
+        left:0%;
+        width:10%;
+    }
+    90% {
+        left:90%;
+        width:10%;
+    }
+    100% {
+        left:90%;
+        width:10%;
+    }
+}
+/*--------------*/
+
+@keyframes forward {
+    0% {
+        background-color:maroon;
+        width:10%;
+        left:0%;
+    }
+    100% {
+          background-color:yellow;
+        width:10%;
+        left:90%;
+    }
+
+}
+@keyframes progress_bar {
+    0% {
+    width:0%;
+    }
+    100% {
+    width:100%;
+    }
+}
+@keyframes count_8s {
+    0% {content:"8s"}
+    12.5% {content:"7s"}
+    25% {content:"6s"}
+    37.5% {content:"5s"}
+    50% {content:"4s"}
+    62.5% {content:"3s"}
+    75% {content:"2s"}
+    87.5%{content:"1s"}
+    100%{content:"0s"}
+}
+/*-------------------------------------*/
+/*--used in introduction*/
+@keyframes fade_in_out {
+    0% {
+        opacity:0;
+    }
+
+    7% {
+        opacity:1;
+    }
+
+    27% {
+        opacity:1;
+    }
+
+    33% {
+        opacity:0;
+    }
+
+}
+@keyframes change_col {
+    0% {background-color:maroon;}
+    50% {background-color:yellow;}
+    100% {background-color:maroon;}
+}
+@keyframes change_opa {
+    0% {opacity:100%;}
+    50% {opacity:0%;}
+}
+@keyframes change_sz {
+    0% {
+        height:100%;
+        width:100%;
+        top:0;
+        left:0;
+    }
+    50% {
+        height:10%;
+        width:10%;
+        top:45%;
+        left:45%;
+    }
+    90% {
+        height:100%;
+        width:100%;
+        top:0;
+        left:0;
+    }
+}
+@keyframes change_pos {
+    0% {
+        top:5%;
+        left:15%;
+    }
+
+    25% {
+        top:15%;
+        left:55%;
+    }
+
+    50% {
+        top:55%;
+        left:45%;
+    }
+
+    75% {
+        top:45%;
+        left:5%;
+    }
+
+    100% {
+        top:5%;
+        left:15%;
+    }
+}
+@keyframes change_sha {
+    0% {
+        border-radius:0;
+    }
+    45% {
+        border-radius:50%;
+    }
+    55% {
+        border-radius:50%;
+    }
+    100% {
+        border-radius:0;
+    }
+}
+/*----------------*/
+/*----------used in css animations------------*/
+@keyframes loop_round {
+    0% {
+        background-color:maroon;
+        width:20px;
+        height:20px;
+        top:0px;
+        left:0px;
+
+    }
+    3% {
+        width:40px;
+        left:0px;
+    }
+
+    22% {
+        width:40px;
+        left:140px;
+    }
+    25% {
+        width:20px;
+        height:20px;
+        top:0px;
+        left:160px;
+    }
+    28% {
+        height:40px;
+        top:0px;
+    }
+    47% {  
+        height:40px;
+        top:140px;
+    }
+    50% {
+        width:20px;
+        height:20px;
+        top:160px;
+        left:160px;
+    }
+    53% {
+        width:40px;
+        left:140px;
+    }
+    72% {
+        width:40px;
+        left:0px;
+    }
+    75% {
+        width:20px;
+        height:20px;
+        top:160px;
+        left:0px;
+    }
+    78% {
+        height:40px;
+        top:140px;
+    }
+    97% {
+        height:40px;
+        top:0px;
+    }
+    100% {
+        width:20px;
+        height:20px;
+        top:0px;
+        left:0px;
+    }
+}
+
+
+/*===================*/
+
+/*=========global animation elements==========*/
+/**/
+.bar { 
+	height: 20px;
+	position: relative;
+	background: var(--col-darkest,darkgray);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+/**/
+.bar span{
+    display: block;
+    height: 100%;
+    width:0%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: maroon;
+
+    box-shadow: 
+      inset 0 2px 9px  rgba(255,255,255,0.3),
+      inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+/**/
+.square { 
+    height: 100px;
+    width:100px;
+	position: relative;
+	background: var(--col-darkest,darkgray);
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+}
+/**/
+.square span{
+    display: block;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: maroon;
+
+    box-shadow: 
+      inset 0 2px 9px  rgba(255,255,255,0.3),
+      inset 0 -2px 6px rgba(0,0,0,0.4);
+    position: relative;
+    overflow: hidden;
+}
+#count_8s_down::after {
+    position:relative;
+    top:48%;
+    left:48%;
+    font-weight:700;
+    line-height:5rem;
+    font-size: 1.5rem;
+    content:"";
+
+    animation-name:count_8s;
+    animation-duration:8s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+/**/
+#count_8s_down_int::after {
+    position:relative;
+    top:48%;
+    left:48%;
+    font-weight:700;
+    line-height:5rem;
+    font-size: 1.5rem;
+    content:"";
+    animation-name:count_8s;
+    animation-duration:8s;
+    animation-fill-mode:forwards;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+/*===================*/
+
+/*=============introduction=================*/
+#exam_bouncing_ball {
+    list-style-type:none;
+    margin-left:0;
+    display:flex;
+    flex-direction:row;
+    position:relative;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+    width:100%;
+}
+
+.flex_img_container {
+    flex:1 1 10rem;
+    margin:10px;
+
+}
+.flex_img_container img {
+    width:100%;
+}
+#ball_img_prop {
+    display:none;
+}
+/**/
+div#example_anim {
+    position:relative;
+}
+/**/
+div#intro_anims {
+    display:none;
+    position:relative;
+}
+/**/
+input#collapse_anim {
+    display:none;
+}
+
+/*button to see animation showcases*/
+label#collapse_label {
+    height:1.5rem;
+    font-size:1.2rem;
+    line-height:1.5rem;
+    font-weight:600;
+
+    position:relative;
+    top:5px;
+    display:block;
+    z-index:20;
+    width:10rem;
+    margin:auto;
+    text-align:center;
+    color:white;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*background for animation showcase button*/
+label#collapse_label:after {
+    content:'';
+    position:absolute;
+    height:1.5rem;
+    left:0;
+    width:100%;
+    background-color:maroon;
+    border:black 1px solid;
+    z-index:-1;
+}
+
+/*change button to red background with white text when clicked*/
+input#collapse_anim:checked +label#collapse_label:after {
+    background-color:gainsboro;
+    color:black;
+}
+/*show animations when button is clicked*/
+input#collapse_anim:checked ~div#intro_anims {
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    flex:0 0 10rem;
+    
+}
+/**/
+#colC {
+    height:100%;
+    width:100%;
+    animation-name:change_col;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/**/
+#opaC {
+    height:100%;
+    width:100%;
+    position:relative;
+    background-color:maroon;
+    animation-name:change_opa;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    z-index:100;
+}
+
+#hasOpaC::before {
+    content:"I'm invisible";
+    color:var(--col-lightest);
+    opacity:100%;
+    position: absolute;
+    top:30%;
+    left:20%;
+
+    z-index:0;
+
+}
+
+
+/**/
+#szC {
+    height:100%;
+    width:100%;
+    animation-name:change_sz;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+
+
+#posC {
+    height:40%;
+    width:40%;
+    position:absolute;
+    left:50%;
+    background-color:maroon;
+    animation-name:change_pos;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/**/
+#shaC {
+    height:100%;
+    width:100%;
+    animation-name:change_sha;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/*===================================*/
+
+/*=================CSS animations=================*/
+/*bar height is 20px with 10px padding*/
+
+div#anim_loop {
+    background-color: lightgray;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    top:10%;
+    margin: 0px auto;
+}
+  
+  /* If you want text inside of the container */
+#anim_loop .bar {
+    position: absolute;
+    box-shadow:none;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+#loop_2 {
+    transform:rotate(-90deg);
+    transform-origin:180px;
+
+}
+#loop_3 {
+
+    transform:translate(0px, 160px);
+}
+#loop_4 {
+    transform:rotate(90deg);
+    transform-origin:20px;
+}
+#anim_loop_span {
+    position:relative;
+    width:0%;
+    z-index:10;
+    animation-name:loop_round;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+/*==================================*/
+
+/*=================animation-duration=================*/
+
+#forward_8s {
+    animation-name:forward;
+    animation-duration:8s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+  }
+  #forward_4s {
+    animation-name:forward;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+#forward_2s {
+    animation-name:forward;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+
+/*==================================*/
+
+/*===============animation-iteration-count===================*/
+/**/
+#iter_hov_start:hover span#rep_1_time, #iter_hov_start:hover span#rep_3_time, #iter_hov_start:hover span#rep_forever{
+    animation-play-state:running;
+}
+#rep_1_time {
+    animation-name:forward;
+    animation-duration:2s;
+    animation-iteration-count:1;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+#rep_3_time {
+    animation-name:forward;
+    animation-duration:2s;
+    animation-iteration-count:3;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+#rep_forever {
+    animation-name:forward;
+    animation-duration:2s;
+    animation-iteration-count:infinite;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+/*==================================*/
+
+/*================animation-delay==================*/
+#delay_hov_start:hover span#anim_-2s_delay, 
+#delay_hov_start:hover span#anim_no_delay, 
+#delay_hov_start:hover span#anim_2s_delay, 
+#delay_hov_start:hover span#anim_4s_delay, 
+#delay_hov_start:hover div#count_8s_down_int::after {
+    animation-play-state:running;
+}
+
+/**/
+#anim_-2s_delay{
+    animation-name:progress_bar;
+    animation-duration:4s;
+    animation-delay:-2s;
+    animation-fill-mode:both;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+
+/**/
+#anim_no_delay{
+    animation-name:progress_bar;
+    animation-duration:4s;
+    animation-fill-mode:both;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+/**/
+#anim_2s_delay{
+    animation-name:progress_bar;
+    animation-duration:4s;
+    animation-delay:2s;
+    animation-fill-mode:both;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+/**/
+#anim_4s_delay {
+    animation-name:progress_bar;
+    animation-duration:4s;
+    animation-delay:4s;
+    animation-fill-mode:both;
+    animation-play-state:paused;
+    animation-timing-function:linear;
+}
+/*==================================*/
+
+/*================animation-direction==================*/
+/**/
+#anim_norm_dir {
+    animation-name:del_norm;
+    animation-duration:5s;
+    animation-direction:normal;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+/**/
+#anim_rev_dir {
+    animation-name:del_rev;
+    animation-duration:5s;
+    animation-direction:reverse;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+/**/
+#anim_alt_dir {
+    animation-name:del_alt;
+    animation-duration:10s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+/**/
+#anim_revalt_dir {
+    animation-name:del_revalt;
+    animation-duration:10s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+}
+
+
+/*==================================*/
+
+/*=================animation-fill-mode=================*/
+/**/
+#fill_hov_start:hover span#anim_fill_forw, #fill_hov_start:hover span#anim_fill_back, #fill_hov_start:hover span#anim_fill_both {
+    animation-play-state:running;
+}
+
+  /**/
+#anim_fill_none {
+    width:0%;     
+}
+/**/
+#anim_paused_first {
+
+    animation-name:forward;
+    animation-duration:5s;
+    animation-play-state: paused;
+    animation-timing-function:linear;
+    animation-fill-mode:backwards;
+    
+}
+/**/
+#anim_paused_last {
+    width:0%;
+    animation-name:forward;
+    animation-duration:5s;
+    animation-play-state: paused;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    animation-direction:reverse;
+}
+/**/
+#anim_fill_forw {
+    width:0%;
+    animation-name:forward;
+    animation-duration:5s;
+    animation-play-state: paused;
+    animation-timing-function:linear;
+    animation-fill-mode:forwards;
+    animation-delay:2s;
+}
+/**/
+#anim_fill_back {
+    width:0%;
+    animation-name:forward;
+    animation-duration:5s;
+    animation-play-state: paused;
+    animation-timing-function:linear;
+    animation-fill-mode:backwards;
+    animation-delay:2s;
+}
+/**/
+#anim_fill_both {
+    width:0%;
+    animation-name:forward;
+    animation-duration:5s;
+    animation-play-state: paused;
+    animation-timing-function:linear;
+    animation-fill-mode:both;
+    animation-delay:2s;
+}
+
+
+/*==================================*/
+
+/*================animation-play-state==================*/
+#anim_play_pause {
+    animation-name:forward;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-play-state:paused;
+}
+#anim_play_run {
+    animation-name:forward;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+    animation-play-state:running;
+}
+/*==================================*/
+
+/*================animation-timing-function==================*/
+#anim_time_ease{
+    animation-name:forward;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease;
+}
+#anim_time_line{
+    animation-name:forward;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:linear;
+}
+#anim_time_ease_in{
+    animation-name:forward;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in;
+}
+#anim_time_ease_out{
+    animation-name:forward;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-out;
+}
+#anim_time_ease_in_out{
+    animation-name:forward;
+    animation-duration:5s;
+    animation-iteration-count:infinite;
+    animation-timing-function:ease-in-out;
+}
+/*==================================*/
+
+
+/*================bezier_curve==================*/
+#bezier_flex {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#bezier_flex figure {
+    flex: 1 1 6rem;
+    width:100%;
+
+}
+#bezier_flex div {
+    flex: 1 1 12rem;
+}
+
+#bezier_img {
+    display:block;
+    margin:auto;
+    height:70%;
+    width:70%;
+}
+/*==================================*/
+
+/*==============requirements for fcc================*/
+
+
+/*==========================*/
+
+/*===============animation page specific media queries==============*/
+@media only screen and (max-width:1280px) {
+    /*------introduction---------*/
+    #exam_bouncing_ball {
+        display:block;
+
+    }
+
+    .flex_img_container {
+        position:absolute;
+
+        left:0;
+        right:0;
+
+        margin:0 auto;
+        height:20rem;
+        width:80%;
+        opacity:0;
+        animation-name:fade_in_out;
+        animation-timing-function:linear;
+        animation-duration:12s;
+        animation-iteration-count:infinite;
+    }
+
+    .flex_img_container img {
+        width:100%;
+        height:auto;
+    }
+    #ball_img_prop {
+        position:relative;
+        display:block;
+        visibility: hidden;
+    }
+    .flex_img_container:nth-child(1) {
+        animation-delay:0s;
+    }
+    .flex_img_container:nth-child(2) {
+        animation-delay:4s;
+    }
+    .flex_img_container:nth-child(3) {
+        animation-delay:8s;
+    }
+/*----------------------------------------*/
+
+/*--------------animation-direction-------------*/
+#ex_dire .examblock {
+    width:45%;
+}
+
+#ex_dire .codeblock {
+    width:55%;
+}
+/*----------------------------------------*/
+
+/*--------------animation-direction-------------*/
+#ex_time .examblock {
+    width:45%;
+}
+
+#ex_time .codeblock {
+    width:55%;
+}
+/*----------------------------------------*/
+
+/*-------------bezier-curve------------*/
+#bezier_flex figure {
+    flex: 1 1 9rem;
+
+
+}
+#bezier_flex div {
+    flex: 1 1 9rem;
+}
+/*----------------------------------------*/
+}
+/*=============================================*/
+
+@media only screen and (max-width:960px) { 
+    /*-------------#banner-------------*/
+    body #banner {
+        position:relative;
+        z-index:0;
+    }
+    /*--------------------------*/
+
+    /*------------nav--------------*/
+    body #navbar {
+        float:none;
+        position:sticky;
+        top:0;
+        z-index:100;
+        width:100%;
+        height:auto;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+
+    }
+    #navbar .nav-link {
+        text-align:center;
+    }
+    #navbar #nav_head {
+        display:none;
+    }
+    /*--------------------------*/
+
+    /*--------------body------------*/
+    body main {
+        position:relative;
+        float:none;
+        width:100%;
+        margin-top:0;
+        max-width:none;
+    }
+
+    body footer {
+        width:100%;
+        max-width:none;
+    }
+    /*--------------------------*/
+}
+
+@media only screen and (max-width:688px) { 
+    /*------------nav--------------*/
+    body #navbar {
+        display:none;
+    }
+    /*--------------------------*/
+    /*------------all example/code divs--------------*/
+    section div.flex_exam_code {
+        flex-direction:column;
+    }
+    .flex_exam_code figure.examblock >figcaption {
+        position:relative;
+
+    }
+    .flex_exam_code figure.examblock {
+        width:100%;
+    }
+    .flex_exam_code figure.codeblock {
+        width:100%;
+    }
+    div#ex_dire figure.examblock {
+        width:100%;
+    }
+    div#ex_dire figure.codeblock {
+        width:100%;
+    }
+    div#ex_time figure.examblock {
+        width:100%;
+    }
+    div#ex_time figure.codeblock {
+        width:100%;
+    }
+    /*--------------------------*/
+    /*------------hezier_curve--------------*/
+    #bezier_flex {
+        flex-direction:column;
+    }
+
+    #bezier_img {
+        width:100%;
+        height:auto;
+        margin: auto;
+    }
+    /*--------------------------*/
+}

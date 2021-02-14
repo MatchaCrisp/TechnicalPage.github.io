@@ -1,0 +1,342 @@
+/*used by cssDec.html */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import 'textsty.css';
+@import 'pseudo.css';
+@import 'anims.css';
+/*=====================desktop page layout================*/
+/*-------------banner------------
+  --nav-- ----main(articles)-----
+  --nav-- -------article---------
+  --nav-- -------article---------
+  -----------footer------------- 
+*/
+
+/*===============mobile page layout============*/
+/*------------banner---------
+  ----------nav--------------
+  --------main(articles)-----
+  ------article--------------
+  ----------article----------
+  ----------footer-----------
+*/
+/* =============CSS reset=================================== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*===========================================================*/
+
+/* asterisk applies to everything */
+*{
+    /*sans-serif means with no accent on letters */
+    font-family:'EB Garamond', serif; 
+}
+
+:root {
+    --col-mar:#A80000;
+    --col-red:#F51717;
+    --col-yel:#FFFFFA;
+    
+    --col-blu:#5E00FF;
+    
+    --col-bla:#000000;
+    --col-darkest:#333333;
+    --col-gra:#D3D3D3;
+    --col-dar:#949494;
+    --col-lig:#E3E3E3;
+    --col-lightest:#EDEDED;
+    --col-whi:#FFFFFF;
+}
+
+html {
+    /*1 rem = 16 px */
+    font-size:16px;
+
+
+}
+/*===================semantic code class========================*/
+code {
+
+    font-size:1.1rem;
+    background-color:lightgray;
+    color:black;
+    line-height:1.4rem;
+
+}
+
+.lcode {
+    background-color:var(--col-lig,lightgray);
+    font-size:1.1rem;
+
+}
+.lcode code {
+    background-color:inherit;
+}
+/*============================global classes============================*/
+em {
+    font-weight:600;
+}
+figcaption {
+    font-weight:700;
+    text-align: center;
+    font-size: 1.5rem;
+}
+/**/
+.rel {
+    position:relative;
+}
+.centered {
+    text-align:center;
+}
+p {
+    margin-top:1rem;
+    margin-bottom:1rem;
+}
+ul {
+    list-style-type:disc;
+    margin-left:4rem;
+}
+
+/*============banner======================================*/
+#banner {
+    height:6rem;
+    line-height:9rem;
+    width:100%;
+    position:fixed;
+    z-index:100;
+    color:var(--col-whi,white);
+    background-color:var(--col-bla,black);
+}
+#banner h1 {
+    font-size:3rem;
+}
+#banner a{
+    color:var(--col-whi,white);
+    text-decoration:none;
+}
+
+/*========================================================*/
+
+/*===============container for articles ================*/
+main {
+    float:right;
+    width:84%;
+    position:relative;
+    margin-top:6rem;
+    max-width:calc(100% - 15rem);
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+    align-items:space-evenly;
+    background-color:var(--col-lig,lightgray);
+}
+
+article {
+    padding: 2rem;
+    margin: 2rem;
+    height: auto;
+    border: black 1px solid;
+    border-radius:0.1rem;
+    background-color:var(--col-yel,white);
+}
+article h3 {
+    text-transform: capitalize;
+    font-weight:500;
+    font-size:1.5rem;
+    text-align: center;
+}
+
+article p {
+    text-align:justify;
+    line-height:1.2rem;
+}
+section {
+    padding: 2rem;
+    margin: 2rem;
+    height: auto;
+    border: black 1px solid;
+    border-radius:0.1rem;
+    background-color:var(--col-yel,white);
+}
+section h3 {
+    text-transform: capitalize;
+    font-weight:500;
+    font-size:1.5rem;
+    text-align: center;
+}
+
+section p {
+    text-align:justify;
+    line-height:1.2rem;
+}
+
+/*========================================================*/
+
+/*======================footer========================*/
+footer {
+    margin:0rem;
+    height:2rem;
+    width:84%;
+    max-width:calc(100% - 15rem);
+    position:relative;
+    float:right;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    align-items:center;
+    color:var(--col-whi,white);
+    background-color:var(--col-bla,black);
+}
+footer a{
+    color:var(--col-whi,white);
+    text-decoration:none;
+}
+
+/*========================================================*/
+
+/*====================nav======================*/
+nav a{
+    color:var(--col-lightest,white);
+    text-transform:capitalize;
+    text-decoration:none;
+}
+/* nav for bigger viewport */
+nav{
+    line-height:.2rem;
+    width:16%;
+    height:calc(100% - 6rem);
+    min-width:15rem;
+    position:fixed;
+    top:6rem;
+    z-index:10;
+    float:left;
+    background-color:var(--col-darkest,darkgray);
+}
+/**/
+#nav_head {
+    height:1.6rem;
+    font-size:1.3rem;
+    line-height:1.6rem;
+    font-weight:500;
+    display:block;
+    padding: 2px 1px 1px .4rem;
+    margin-bottom:0.2rem;
+    color:var(--col-lig,white);
+}
+
+/*links to two main pages: html/css */
+.hubLink {
+    height:1.6rem;
+    font-size:1.3rem;
+    line-height:1.6rem;
+    font-weight:500;
+    display:block;
+    padding: 2px 1px 1px .4rem;
+    margin-bottom:0.2rem;
+}
+
+/*links to all big subcategories:
+    HTML: Media items, User input, Semantics, Forms, Accessibility, Table, Text style
+    CSS: Specificity, Selectors, Variables, Media Queries, Size units, Colors, Text
+        Positioning, Flexbox, Flexgrid, Animation */
+.nav-link {
+    height:1.4rem;
+    line-height:1.4rem;
+    font-size:1.1rem;
+    font-weight:450;
+    display:block;
+    padding: 2px 1px 1px .8rem;
+    margin-bottom:0.1rem;
+}
+
+/*links to all individual concepts/syntax 
+    HTML:
+    CSS:*/
+.subLink {
+    height:1.2rem;
+    line-height:1.2rem;
+    font-size:1rem;
+    display:block;
+    padding: 1px 1px 1px 1.2rem;
+}
+
+/*========================================================*/
+
+/*======================example/code section template================*/
+/*flexbox containing animation block (left) and code block (right)*/
+div.flex_exam_code {
+    height:auto;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+
+}
+
+/*left (animation) block of flexbox */
+figure.examblock {
+    margin:.5rem;
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction:column;
+    width:50%;
+    position:relative;
+
+
+}
+
+/*right (code) block of flexbox*/
+figure.codeblock {
+    display:flex;
+    flex-direction:column;
+    width:50%;
+    height:auto;
+    margin:.5rem;
+}
+.examblock >figcaption {
+    position:absolute;
+    top:0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+/*===============================*/

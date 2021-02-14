@@ -1,0 +1,83 @@
+/*===========responsive design for tablet or smaller============== */
+@media only screen and (max-width:768px) {
+    .desktop {
+        display:none;
+    }
+    .mobile {
+        position:relative;
+        display:flex;
+        justify-content:space-evenly;
+        height:1.5rem;
+        z-index:1;
+    }
+
+}
+/*=========================================*/
+
+
+/*===================mobile horizontal interactive nav======================*/
+/*mobile site nav a container */
+#htmls_content, #csss_content {
+    display:none;
+    opacity:90%;
+    background-color:var(--col-bla,black);
+    position:absolute;
+    left:0;
+    top:1.5rem;
+}
+
+/*mobile site buttons */
+label#htmls_lab, label#csss_lab {
+    height:1.5rem;
+    font-size:1.2rem;
+    line-height:1.5rem;
+    font-weight:500;
+    position:relative;
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    color:var(--col-lightest,white);
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                supported by Chrome, Edge, Opera and Firefox */
+}
+
+/*checkboxes hidden to simulate menu */
+input#htmls, input#csss{
+    display: none;
+}
+
+.mobile a {
+
+    text-decoration:none;
+}
+
+/* background for mobile site main buttons */
+label#htmls_lab:after, label#csss_lab:after {
+    content:'';
+    position:absolute;
+    height:1.5rem;
+    left:0;
+    width:100%;
+    background-color:var(--col-darkest,darkgray);
+    z-index:-1;
+}
+
+/*display mobile nav a when checkbox checked */
+input#htmls:checked ~#htmls_content,input#csss:checked ~#csss_content {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,10rem);
+    width:100%;
+}
+
+/*change mobile site main buttons background color to black when checkbox checked */
+input#htmls:checked ~#htmls_lab:after, input#csss:checked ~#csss_lab:after {
+    background-color:var(--col-bla,black);
+}
+
+/*=========================================*/

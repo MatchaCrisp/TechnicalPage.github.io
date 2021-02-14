@@ -1,0 +1,1 @@
+This is a pure HTML/CSS solution to FCC #3 create a technical documentation page
