@@ -1,10 +1,10 @@
 
 /*=================hover/active states =============*/
-
 .marHov:hover {
     background-color:var(--col-mar,maroon);
     color:var(--col-whi,white);
 }
+
 /*used by desktop nav a */
 .whiHov:hover {
     background-color:var(--col-whi,white);

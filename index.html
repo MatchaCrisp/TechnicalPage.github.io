@@ -1,155 +1,182 @@
 <!DOCTYPE html>
 <!--encase all html within-->
 <html lang="en">
-    <!--metadata-->
-    <head>
-        <!--external css sheet or internal css style element-->
-        <link rel="stylesheet" type="text/css" href="./res/css/accs.css">
+<!--metadata-->
 
-        <!--<style>
-            
-        </style>-->
-        <!--tab title-->
-        <title>
-            CSS Animations
-        </title>
-        
-    </head>
-    <!--viewport code-->
-    <body>
-        <!--semantic head-->
-        <header id="banner">
-            <h1 class="halfTab"><a href="#">Web Dev References</a></h1>
+<head>
+    <!--external css sheet or internal css style element-->
+    <link rel="stylesheet" type="text/css" href="./res/css/accs.css">
+
+    <!--tab title-->
+    <title>
+        CSS Animations
+    </title>
+
+</head>
+<!--viewport code-->
+
+<body>
+    <!--semantic head-->
+    <header id="banner">
+        <h1 class="halfTab"><a href="#">Web Dev References</a></h1>
+    </header>
+
+
+    <!--semantic collection of links-->
+    <nav id="navbar">
+        <!--Navbar header-->
+        <header>
+            <h3 id="nav_head">CSS Animation</h3>
         </header>
 
+        <!--navbar links to sections-->
+        <a class="nav-link whiHov marTar" href="#introduction">Introduction</a>
+        <a class="nav-link whiHov marTar" href="#CSS_animations">CSS animations</a>
+        <a class="nav-link whiHov marTar" href="#animation-duration">animation-duration</a>
+        <a class="nav-link whiHov marTar" href="#animation-iteration-count">animation-iteration-count</a>
+        <a class="nav-link whiHov marTar" href="#animation-delay">animation-delay</a>
+        <a class="nav-link whiHov marTar" href="#animation-direction">animation-direction</a>
+        <a class="nav-link whiHov marTar" href="#animation-fill-mode">animation-fill-mode</a>
+        <a class="nav-link whiHov marTar" href="#animation-play-state">animation-play-state</a>
+        <a class="nav-link whiHov marTar" href="#animation-timing-function">animation-timing-function</a>
+        <a class="nav-link whiHov marTar" href="#bezier_curve">Bezier Curve</a>
+        <a class="nav-link whiHov marTar" href="#animation_shorthand">animation shorthand</a>
+    </nav>
 
-            <!--semantic collection of links-->
-            <nav id="navbar">
-                <!--HTML section-->
-                <header><h3 id="nav_head">CSS Animation</h3></header>
-                <!--Media-->
-                <a class="nav-link whiHov marTar" href="#introduction">Introduction</a>
-                <a class="nav-link whiHov marTar" href="#CSS_animations">CSS animations</a>
-                <a class="nav-link whiHov marTar" href="#animation-duration">animation-duration</a>
-                <a class="nav-link whiHov marTar" href="#animation-iteration-count">animation-iteration-count</a>
-                <a class="nav-link whiHov marTar" href="#animation-delay">animation-delay</a>
-                <a class="nav-link whiHov marTar" href="#animation-direction">animation-direction</a>
-                <a class="nav-link whiHov marTar" href="#animation-fill-mode">animation-fill-mode</a>
-                <a class="nav-link whiHov marTar" href="#animation-play-state">animation-play-state</a>
-                <a class="nav-link whiHov marTar" href="#animation-timing-function">animation-timing-function</a>
-                <a class="nav-link whiHov marTar" href="#bezier_curve">Bezier Curve</a>
-                <a class="nav-link whiHov marTar" href="#animation_shorthand">animation shorthand</a>
-        
-            </nav>
-            <!--semantic body-->
-            <main id="main-doc">
-                <section class="main-section" id="introduction">
-                    <header><h3>Introduction</h3></header>
-                    <div class="exTxt">
+    <!--semantic body-->
+    <main id="main-doc">
+        <!--intro to css animation-->
+        <section class="main-section" id="introduction">
+            <header>
+                <h3>Introduction</h3>
+            </header>
 
-                        <p>Your HTML webpage does not have to be static! CSS has built-in animation
-                            capabilities. By combining them with your HTML5 code, you can make your
-                            webpage come to life.</p>
-                        <p>But before we dive in, here's a quick summary on animations in general: 
-                            Animations are made of a series of still pictures, or frames,
-                            each slightly different from the last. <em>Key frames</em> are the bare
-                            minimum number of frames that still tells the same story as
-                            the full animation itself. The rest of the frames between key frames
-                            are called <em>in-betweens</em>, and they aid in the smooth transition
-                            from one key frame to the next.</p>
+            <!--explanation-->
+            <div class="exTxt">
+                <p>Your HTML webpage does not have to be static! CSS has built-in animation
+                    capabilities. By combining them with your HTML5 code, you can make your
+                    webpage come to life.</p>
+                <p>But before we dive in, here's a quick summary on animations in general:
+                    Animations are made of a series of still pictures, or frames,
+                    each slightly different from the last. <em>Key frames</em> are the bare
+                    minimum number of frames that still tells the same story as
+                    the full animation itself. The rest of the frames between key frames
+                    are called <em>in-betweens</em>, and they aid in the smooth transition
+                    from one key frame to the next.</p>
 
-                        <figure>
-                            <figcaption>I scribbled the animation of a bouncing ball using the concept of key frames and in-betweens:</figcaption>
-                            <ul id="exam_bouncing_ball">
-                                <li class="flex_img_container"><img id="ball_bounce1" src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main//res/img/ball_bounce1.jpg" alt="animation basics: conceptualizing the animation"></li>
-                                <li class="flex_img_container"><img id="ball_bounce2" src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main//res/img/ball_bounce2.jpg" alt="animation basics: adding key frames"></li>
-                                <li class="flex_img_container"><img id="ball_bounce3" src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main/res/img/ball_bounce3.jpg" alt="animation basics: adding in-betweens"></li>
-                                <li class="flex_img_container" id="ball_img_prop"><img src="./res/img/ball_bounce3.jpg" alt="space filler"></li>  
-                            </ul>
+                <!--keyframe example using pictures-->
+                <figure>
+                    <figcaption>I scribbled the animation of a bouncing ball using the concept of key frames and
+                        in-betweens:</figcaption>
+                    <ul id="exam_bouncing_ball">
+                        <li class="flex_img_container"><img id="ball_bounce1"
+                                src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main//res/img/ball_bounce1.jpg"
+                                alt="animation basics: conceptualizing the animation"></li>
+                        <li class="flex_img_container"><img id="ball_bounce2"
+                                src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main//res/img/ball_bounce2.jpg"
+                                alt="animation basics: adding key frames"></li>
+                        <li class="flex_img_container"><img id="ball_bounce3"
+                                src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main/res/img/ball_bounce3.jpg"
+                                alt="animation basics: adding in-betweens"></li>
+                        <li class="flex_img_container" id="ball_img_prop"><img src="./res/img/ball_bounce3.jpg"
+                                alt="space filler"></li>
+                    </ul>
 
-                        </figure>
-                        <p>The animation of a ball bouncing across the screen was conceptualized with a dotted line tracing its movement in 1. 
-                            Then all the extreme positions are drawn in 2, these are the keyframes.
-                            Finally the in-betweens come in and flesh out what the animation should look like between the keyframes.
-                        </p>
-                        <p class="centered">
-                            click on the button below to see some of the possibilities of CSS animations!</p>
+                </figure>
+
+                <p>The animation of a ball bouncing across the screen was conceptualized with a dotted line tracing its
+                    movement in 1.
+                    Then all the extreme positions are drawn in 2, these are the keyframes.
+                    Finally the in-betweens come in and flesh out what the animation should look like between the
+                    keyframes.
+                </p>
+
+                <p class="centered">
+                    click on the button below to see some of the possibilities of CSS animations!
+                </p>
+            </div>
+
+            <!--sample animations (hidden by default)-->
+            <div id="example_anim">
+                <input type="checkbox" id="collapse_anim">
+                <label for="collapse_anim" id="collapse_label">Click Here</label>
+                <div id="intro_anims">
+                    <figure>
+                        <figcaption>color change</figcaption>
+                        <div class="square"><span id="colC"></span></div>
+                    </figure>
+                    <figure>
+                        <figcaption>opacity change</figcaption>
+                        <div class="square" id="hasOpaC"><span id="opaC"></span></div>
+                    </figure>
+                    <figure>
+                        <figcaption>position change</figcaption>
+                        <div class="square" id="hasPosC"><span id="posC"></span></div>
+
+                    </figure>
+                    <figure>
+                        <figcaption>size change</figcaption>
+                        <div class="square"><span id="szC"></span></div>
+                    </figure>
+                    <figure>
+                        <figcaption>shape change</figcaption>
+                        <div class="square"><span id="shaC"></span></div>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!--keyframes-->
+        <section class="main-section" id="CSS_animations">
+            <header>
+                <h3>CSS animations</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>When animating using CSS, you only need to define the key frames of your
+                    animation, and CSS will do the in-between frames for you. This feature takes a little to get used
+                    to,
+                    but is very worth the effort, as it saves countless hours of manually filling in the in-betweens.
+                    The caveat is the algorithm CSS uses to fill in the blank may not be what you expect, so tweak
+                    around
+                    with your key frames until CSS understands exactly what you want.
+                </p>
+                <p>You can define those animation key frames by using the <code>@keyframes</code> CSS
+                    rule. First declare the rule with a descriptive animation name, then add keyframes
+                    by using percentages and a set of curly brackets. The percentages represent the percent
+                    progress in the animation, and the curly brackets will contain what you want the animated element to
+                    look
+                    like, described in CSS properties.</p>
+                <p>Finally, you tell the browser which element should be animated by using the
+                    <code>animation-name</code>
+                    property. You add the property to the selector of the element you want animated, and the property
+                    value
+                    is the descriptive name you gave your <code>@keyframes</code> rule.</p>
+                <p>Check out the example animation and accompanying sample code below. Note how the two are linked
+                    together
+                    using the animation-name property.
+                </p>
+            </div>
+
+            <!--example code with live version-->
+            <div class="flex_exam_code" id="ex_anim">
+                <!--live code-->
+                <figure class="examblock">
+                    <figcaption>CSS Animation</figcaption>
+                    <div id="anim_loop">
+                        <div class="bar" id="loop_main"><span id="anim_loop_span"></span></div>
+                        <div class="bar" id="loop_2"></div>
+                        <div class="bar" id="loop_3"></div>
+                        <div class="bar" id="loop_4"></div>
                     </div>
-                    <div id="example_anim">
-                        <input type="checkbox" id="collapse_anim">
-                        <label for="collapse_anim" id="collapse_label">Click Here</label>
-                        <div id="intro_anims">
-                            <figure>
-                                <figcaption>color change</figcaption>
-                                <div class="square"><span id="colC"></span></div>
-                            </figure>
-                            <figure>
-                                <figcaption>opacity change</figcaption>
-                                <div class="square" id="hasOpaC"><span id="opaC"></span></div>
-                            </figure>
-                            <figure>
-                                <figcaption>position change</figcaption>
-                                <div class="square" id="hasPosC"><span id="posC"></span></div>
+                </figure>
 
-                            </figure>
-                            <figure>
-                                <figcaption>size change</figcaption>
-                                <div class="square"><span id="szC"></span></div>
-                            </figure>
-                            <figure>
-                                <figcaption>shape change</figcaption>
-                                <div class="square"><span id="shaC"></span></div>
-                            </figure>
-                        </div>
-                    </div>
-                </section>
-                <!--semantic standalone element-->
-                <section class="main-section" id="CSS_animations">
-                    <header><h3>CSS animations</h3></header>
-                    <div class="exTxt">
-                        <!--third in size/importance in header-->
-
-        
-                        <p>When animating using CSS, you only need to define the key frames of your
-                            animation, and CSS will do the in-between frames for you. This feature takes a little to get used to, 
-                            but is very worth the effort, as it saves countless hours of manually filling in the in-betweens.
-                            The caveat is the algorithm CSS uses to fill in the blank may not be what you expect, so tweak around
-                                with your key frames until CSS understands exactly what you want.
-                            </p>
-                        <p>You can define those animation key frames by using the <code>@keyframes</code> CSS
-                            rule. First declare the rule with a descriptive animation name, then add keyframes 
-                            by using percentages and a set of curly brackets. The percentages represent the percent 
-                            progress in the animation, and the curly brackets will contain what you want the animated element to look 
-                            like, described in CSS properties.</p>
-                        <p>Finally, you tell the browser which element should be animated by using the <code>animation-name</code> 
-                            property. You add the property to the selector of the element you want animated, and the property value
-                            is the descriptive name you gave your <code>@keyframes</code> rule.</p>
-                        <p>Check out the example animation and accompanying sample code below. Note how the two are linked together
-                            using the animation-name property.
-                        </p>
-                            
-
-
-
-                    </div>
-                    <div class="flex_exam_code" id="ex_anim">
-                        <figure class="examblock">
-
-                                <figcaption>CSS Animation</figcaption>
-                                <div id="anim_loop">
-                                    <div class="bar" id="loop_main"><span id="anim_loop_span"></span></div>
-                                    <div class="bar" id="loop_2"></div>
-                                    <div class="bar" id="loop_3"></div>
-                                    <div class="bar" id="loop_4"></div>
-
-                                </div>
-
-                        </figure>
-                        <figure class="codeblock">
-
-                                <figcaption>CSS Animation Code</figcaption>
-                                <div class="lcode">
-                                    <code>
+                <!--code-->
+                <figure class="codeblock">
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
                                             #anim_loop {<br>
                                                 &emsp;animation-name:loop_round;<br>
                                                 &emsp;animation-duration:4s;<br>
@@ -163,713 +190,767 @@
                                             100% {...}<br>
                                             }<br>
                                     </code>
-                                </div>
-
-                        </figure>
-                       
                     </div>
-        
-                </section>
+                </figure>
+            </div>
+        </section>
 
-                <!--semantic standalone element-->
-                <section class="main-section" id="animation-duration">
-                    <header><h3>Animation-duration</h3></header>
-                    <div class="exTxt">
-                        <!--third in size/importance in header-->
+        <!--animation-duration-->
+        <section class="main-section" id="animation-duration">
+            <header>
+                <h3>Animation-duration</h3>
+            </header>
 
-                        <p>The <code>animation-duration</code> property defines the duration of one animation cycle, from 0% to 100%. 
-                        For instance giving the property a value of 4s means one playthrough of the animation will take 4 seconds. 
-                        <p>The property can accept positive time values with the units: </p>
-                        <ul>
-                            <li>s (seconds)</li>
-                            <li>ms (milliseconds)</li>
-                        </ul>
-                        <p>CSS uses a default value of 0s when no duration is specified, indicating that no animation should occur.</p>
-                        <p>Check out the animation below, and the accompanying code. Note the effect varying the value of the 
-                            <code>animation-duration</code> property has on the animation itself.
-                        </p>
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>animation-duration</code> property defines the duration of one animation cycle, from 0% to
+                    100%.
+                    For instance giving the property a value of 4s means one playthrough of the animation will take 4
+                    seconds.
+                <p>The property can accept positive time values with the units: </p>
+                <ul>
+                    <li>s (seconds)</li>
+                    <li>ms (milliseconds)</li>
+                </ul>
+                <p>CSS uses a default value of 0s when no duration is specified, indicating that no animation should
+                    occur.</p>
+                <p>Check out the animation below, and the accompanying code. Note the effect varying the value of the
+                    <code>animation-duration</code> property has on the animation itself.
+                </p>
 
-                    </div>
-                    <div class="flex_exam_code" id="ex_dura">
-                        <figure class="examblock">
-                                <figcaption>CSS Animation</figcaption>
-                                <div id="count_8s_down"></div>
+            </div>
 
-                            <figure>
-                                <figcaption>duration: 8s</figcaption>
-                                <div class="bar">
-                                    <span id="forward_8s"></span>
-                                </div>
+            <!--sample code and live code-->
+            <div class="flex_exam_code" id="ex_dura">
 
-                            </figure>
-                            <figure>
-                                <figcaption>duration: 4s</figcaption>
-                                <div class="bar">
-                                    <span id="forward_4s"></span>
-                                </div>
+                <!--live code-->
+                <figure class="examblock">
+                    <!--title-->
+                    <figcaption>CSS Animation</figcaption>
+                    <div id="count_8s_down"></div>
 
-                            </figure>
-                            <figure>
-                                <figcaption>duration: 2s</figcaption>
-                                <div class="bar">
-                                    <span id="forward_2s"></span>
-                                </div>
-
-                            </figure>
-                        </figure>
-                        <figure class="codeblock">
-                                <figcaption>CSS Animation Code</figcaption>
-                                <div class="lcode">
-                                    <code>
-                                            #forward_8s {<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:8s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                                &emsp;animation-timing-function:linear;<br>
-                                            }<br>
-                                            #forward_4s {<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                                &emsp;animation-timing-function:linear;<br>
-                                            }<br>
-                                            #forward_2s {<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:2s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                                &emsp;animation-timing-function:linear;<br>
-                                            }<br>
-                                            @keyframes forward {<br>
-                                                0% {<br>
-                                                    &emsp;left:0%;<br>
-                                                    &emsp;background-color:maroon;<br>
-                                                }<br>
-                                                100% {<br>
-                                                    &emsp;left:90%;<br>
-                                                    &emsp;background-color:yellow;<br>
-                                                }<br>
-                                            </code>
-                                </div>
-
-                        </figure>
-                       
-                    </div>
-        
-                </section>
-                <section class="main-section" id="animation-iteration-count">
-                    <header><h3>Animation-iteration-count</h3></header>
-                    <div class="exTxt">
-
-                        <p>The <code>animation-iteration-count</code> property defines how many times the
-                            animation plays before stopping.</p>
-                            <p>The property can accept the following as input values: </p>
-                            <ul>
-                                <li>infinite (animation runs until page is closed)</li>
-                                <li>positive decimal number (a decimal value means the animation runs for a fraction of the total duration)</li>
-                            </ul>
-                            <p>CSS uses a default value of 1 when no iteration count is specified.</p>
-                            <p>Check out the animation below, and the accompanying code. Note the effect varying the value of the 
-                                <code>animation-iteration-count</code> property has on the animation itself.
-                            </p>
-                    </div>
-                    <div class="flex_exam_code" id="ex_iter">
-                        <figure class="examblock" id="iter_hov_start">
-                                <figcaption>CSS Animation</figcaption>
-                            <figure>
-                                <figcaption>repeat: 1 time</figcaption>
-                                <div class="bar">
-                                    <span id="rep_1_time"></span>
-                                </div>
-
-                            </figure>
-                            <figure>
-                                <figcaption>repeat: 3 times</figcaption>
-                                <div class="bar">
-                                    <span id="rep_3_time"></span>
-                                </div>
-
-                            </figure>
-                            <figure>
-                                <figcaption>repeat: forever</figcaption>
-                                <div class="bar">
-                                    <span id="rep_forever"></span>
-                                </div>
-
-                            </figure>
-                        </figure>
-                        <figure class="codeblock">
-
-                                <figcaption>CSS Animation Code</figcaption>
-                                <div class="lcode">
-                                    <code>
-                                            #rep_1_time {<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:2s;<br>
-                                                &emsp;animation-iteration-count:1;<br>
-                                            }<br>
-                                            #rep_3_time {<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:2s;<br>
-                                                &emsp;animation-iteration-count:3;<br>
-                                            }<br>
-                                            #rep_forever {<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:2s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                            }<br>
-                                            @keyframes forward {<br>
-                                                0% {<br>
-                                                    &emsp;left:0%;<br>
-                                                }<br>
-                                                100% {<br>
-                                                    &emsp;left:90%;<br>
-                                                }<br>
-                                            </code>
-                                </div>
-
-                        </figure>
-                       
-                    </div>
-                </section>
-                <!--semantic standalone element-->
-                <section class="main-section" id="animation-delay">
-                    <header><h3>Animation-delay</h3></header>
-                    <div class="exTxt">
-                        <!--third in size/importance in header-->
-
-                        <p>The <code>animation-delay</code> property defines the delay for the start 
-                            of the animation.</p>
-                            <p>The property can accept time values with the units: </p>
-                            <ul>
-                                <li>s (seconds)</li>
-                                <li>ms (milliseconds)</li>
-                            </ul>
-                            <p>CSS uses a default value of 0s when no delay is specified.</p>
-                            <p>a negative time value tells the browser to immediately play the animation from x point onwards. </p>
-                            <p>Check out the animation below, and the accompanying code. Note the effect varying the value of the 
-                                <code>animation-delay</code> property has on the animation itself.
-                            </p>
-
-                    </div>
-                    <div class="flex_exam_code" id="ex_delay">
-                        <figure class="examblock" id="delay_hov_start">
-                                <figcaption>CSS Animation</figcaption>
-                                <div id="count_8s_down_int"></div>
-
-                            <figure>
-                                <figcaption>-2 second delay</figcaption>
-                                <div class="bar">
-                                    <span id="anim_-2s_delay"></span>
-                                </div>
-        
-                            </figure>    
-                            <figure>
-                                <figcaption>No delay</figcaption>
-                                <div class="bar">
-                                    <span id="anim_no_delay"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>2 second delay</figcaption>
-                                <div class="bar">
-                                    <span id="anim_2s_delay"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>4 second delay</figcaption>
-                                <div class="bar">
-                                    <span id="anim_4s_delay"></span>
-                                </div>
-        
-                            </figure>
-                        </figure>
-                        <figure class="codeblock">
-
-                                <figcaption>CSS Animation Code</figcaption>
-                                <div class="lcode">
-                                    <code>
-                                            #anim_-2s_delay{<br>
-                                                &emsp;animation-name:progress_bar;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-delay:-2s;<br>
-                                            }<br>                                        
-                                            #anim_no_delay{<br>
-                                                &emsp;animation-name:progress_bar;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                            }<br>
-                                            #anim_2s_delay{<br>
-                                                &emsp;animation-name:progress_bar;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-delay:2s;<br>
-                                            }<br>
-                                            #anim_4s_delay{<br>
-                                                &emsp;animation-name:progress_bar;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-delay:4s;<br>
-                                            }<br>
-                                            @keyframes progress_bar {<br>
-                                                0% {<br>
-                                                    &emsp;width:0%;<br>
-                                                }<br>
-                                                100% {<br>
-                                                    &emsp;width:100%;<br>
-                                                }<br>
-                                            </code>
-                                </div>
-    
-    
-                        </figure>
-
-                    </div>
-                </section>
-
-                <section class="main-section" id="animation-direction">
-                    <header><h3>Animation-direction</h3></header>
-                    <div class="exTxt">
-                        <!--third in size/importance in header-->
-
-                        <p>The <code>animation-direction</code> property defines the direction of play  
-                            of the animation.</p>
-                            <p>The property can accept the following as input values: </p>
-                            <ul>
-                                <li>normal (default)</li>
-                                <li>reverse</li>
-                                <li>alternate (first normal then reverse)</li>
-                                <li>alternate-reverse (first reverse then normal)</li>
-                            </ul>
-                            <p>Check out the animation below, and the accompanying code for examples of different input for 
-                                <code>animation-direction</code> and their effects.
-                            </p>
-                    </div>
-                    <div class="flex_exam_code" id="ex_dire">
-                        <figure class="examblock">
-                                <figcaption>CSS Animation</figcaption>
-
-                            <figure>
-                                <figcaption>normal direction</figcaption>
-                                <div class="bar">
-                                    <span id="anim_norm_dir"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>reverse direction</figcaption>
-                                <div class="bar">
-                                    <span id="anim_rev_dir"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>alternating direction</figcaption>
-                                <div class="bar">
-                                    <span id="anim_alt_dir"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>reverse alternating direction</figcaption>
-                                <div class="bar">
-                                    <span id="anim_revalt_dir"></span>
-                                </div>
-        
-                            </figure>
-                        </figure>
-                        <figure class="codeblock">
-                                <figcaption>CSS Animation Code</figcaption>
-                                <div class="lcode">
-                                    <code>
-                                        
-                                            #anim_norm_dir{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-direction:normal;<br>
-
-                                            }<br>
-                                            #anim_rev_dir{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-direction:reverse;<br>
-
-                                            }<br>
-                                            #anim_alt_dir{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-direction:alternate;<br>
-
-                                            }<br>
-                                            #anim_revalt_dir{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-direction:alternate-reverse;<br>
-
-                                            }<br>
-                                            @keyframes forward {<br>
-                                                0% {<br>
-                                                    &emsp;left:0%;<br>
-                                                }<br>
-                                                100% {<br>
-                                                    &emsp;left:90%;<br>
-                                                }<br>
-                                            </code>
-                                </div>
-
-                        </figure>
-
-                    </div>
-                </section>
-                <!--semantic standalone element-->
-                <section class="main-section" id="animation-fill-mode">
-                    <header><h3>Animation-fill-mode</h3></header>
-                    <div class="exTxt">
-                        <!--third in size/importance in header-->
-
-                        <p>The <code>animation-fill-mode</code> property defines how the element containing the animation behaves when
-                            the animation is not playing.</p>
-                            <p>The property can accept the following as input values: </p>
-                            <ul>
-                                <li>none (default)</li>
-                                <li>forwards (container displays last keyframe executed when animation ends)</li>
-                                <li>backwards (container displays first keyframe executed before animation begins)</li>
-                                <li>both(both forwards and backwards)</li>
-                            </ul>
-                            <p>Check out the animation below, and the accompanying code for examples of different input for 
-                                <code>animation-fill-mode</code> and their effects.
-                            </p>
-                    </div>
-                    <div class="flex_exam_code" id="ex_fill">
-                        <figure class="examblock" id="fill_hov_start">
-                                <figcaption>CSS Animation</figcaption>
-                            <figure>
-                                <figcaption>element</figcaption>
-                                <div class="bar">
-                                    <span id="anim_fill_none"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>first keyframe</figcaption>
-                                <div class="bar">
-                                    <span id="anim_paused_first"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>last keyframe</figcaption>
-                                <div class="bar">
-                                    <span id="anim_paused_last"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>fill mode:forward</figcaption>
-                                <div class="bar">
-                                    <span id="anim_fill_forw"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>fill mode:backward</figcaption>
-                                <div class="bar">
-                                    <span id="anim_fill_back"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>fill mode:both</figcaption>
-                                <div class="bar">
-                                    <span id="anim_fill_both"></span>
-                                </div>
-        
-                            </figure>
-                        </figure>
-                        <figure class="codeblock">
-
-                                <figcaption>CSS Animation Code</figcaption>
-                                <div class="lcode">
-                                    <code>
-                                        
-                                            #anim_fill_forw{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:5s;<br>
-                                                &emsp;animation-fill-mode:forwards;<br>
-
-                                            }<br>
-                                            #anim_fill_back{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:5s;<br>
-                                                &emsp;animation-fill-mode:backwards;<br>
-
-                                            }<br>
-                                            #anim_fill_both{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:5s;<br>
-                                                &emsp;animation-fill-mode:both;<br>
-
-                                            }
-                                            }<br>
-                                            @keyframes forward {<br>
-                                                0% {<br>
-                                                    &emsp;left:0%;<br>
-                                                }<br>
-                                                100% {<br>
-                                                    &emsp;left:90%;<br>
-                                                }<br>
-                                            </code>
-                                </div>
-    
-        
-        
-
-                            </figure>
-
-                    </div>
-                </section>
-                <section class="main-section" id="animation-play-state">
-                    <header><h3>Animation-play-state</h3></header>
-                    <div class="exTxt">
-
-                        <p>The <code>animation-play-state</code> property tells the animated element if the 
-                        animation should be running or paused.</p>
-                        <p>The property can accept the following as input values: </p>
-                        <ul>
-                            <li>running (default)</li>
-                            <li>paused</li>
-                        </ul>
-                        <p>note the lack of stop as a value.</p>
-                        <p>Check out the animation below, and the accompanying code for examples of different input for 
-                            <code>animation-play-state</code> and their effects.
-                        </p>
-                    </div>
-                    <div class="flex_exam_code" id="ex_play">
-                        <figure class="examblock">
-                            <figcaption>CSS Animation</figcaption>
-                            <figure>
-                                <figcaption>paused</figcaption>
-                                <div class="bar">
-                                    <span id="anim_play_pause"></span>
-                                </div>
-                            </figure>
-                            <figure>
-                                <figcaption>running</figcaption>
-                                <div class="bar">
-                                    <span id="anim_play_run"></span>
-                                </div>
-                            </figure>
-                        </figure>
-                        <figure class="codeblock">
-                            <figcaption>CSS Animation Code</figcaption>
-                            <div class="lcode">
-                                <code>
-                                                                            
-                                    #anim_play_pause{<br>
-                                        &emsp;animation-name:forward;<br>
-                                        &emsp;animation-duration:4s;<br>
-                                        &emsp;animation-iteration-count:infinite;<br>
-                                        &emsp;animation-play-state:paused;<br>
-
-
-                                    }<br>
-                                    #anim_play_run{<br>
-                                        &emsp;animation-name:forward;<br>
-                                        &emsp;animation-duration:4s;<br>
-                                        &emsp;animation-iteration-count:infinite;<br>
-                                        &emsp;animation-play-state:running;<br>
-
-
-                                    }<br>
-                                    @keyframes forward {<br>
-                                        0% {<br>
-                                            &emsp;left:0%;<br>
-                                        }<br>
-                                        100% {<br>
-                                            &emsp;left:90%;<br>
-                                        }<br>
-                                </code>
-                            </div>
-                        </figure>
-                    </div>
-                </section>
-                <section class="main-section" id="animation-timing-function">
-                    <header><h3>Animation-timing-function</h3></header>
-                    <div class="exTxt">
-
-                        <p>the <code>animation-timing-function</code> property defines how the animation
-                            is played over the duration of the animation.</p>
-                            <p>The property can accept the following as input values: </p>
-                            <ul>
-                                <li>ease (default)</li>
-                                <li>linear</li>
-                                <li>ease-in</li>
-                                <li>ease-out</li>
-                                <li>ease-in-out</li>
-                            </ul>
-                            <p>When these pre-defined speeds are not what you want, you can specify your own using the 
-                                <code>cubic-bezier</code> function.
-                            </p>
-                            <p>Check out the animation below, and the accompanying code for examples of different input for 
-                                <code>animation-timing-function</code> and their effects.
-                            </p>
-                    </div>
-                    <div class="flex_exam_code" id="ex_time">
-                        <figure class="examblock">
-                            <figcaption>CSS Animation</figcaption>
-                            <figure>
-                                <figcaption>ease (default)</figcaption>
-                                <div class="bar">
-                                    <span id="anim_time_ease"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>linear</figcaption>
-                                <div class="bar">
-                                    <span id="anim_time_line"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>ease-in</figcaption>
-                                <div class="bar">
-                                    <span id="anim_time_ease_in"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>ease-out</figcaption>
-                                <div class="bar">
-                                    <span id="anim_time_ease_out"></span>
-                                </div>
-        
-                            </figure>
-                            <figure>
-                                <figcaption>ease-in-out</figcaption>
-                                <div class="bar">
-                                    <span id="anim_time_ease_in_out"></span>
-                                </div>
-        
-                            </figure>
-
-                        </figure>
-                        <figure class="codeblock">
-
-                                <figcaption>CSS Animation Code</figcaption>
-                                <div class="lcode">
-                                    <code>
-                                        
-                                            #anim_time_ease{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-
-
-                                            }<br>
-                                            #anim_time_line{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                                &emsp;animation-timing-function:linear;<br>
-
-                                            }<br>
-                                            #anim_time_ease_in{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                                &emsp;animation-timing-function:ease-in;<br>
-
-                                            }<br>
-                                            #anim_time_ease_out{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                                &emsp;animation-timing-function:ease-out;<br>
-
-                                            }<br>
-                                            #anim_time_ease_in_out{<br>
-                                                &emsp;animation-name:forward;<br>
-                                                &emsp;animation-duration:4s;<br>
-                                                &emsp;animation-iteration-count:infinite;<br>
-                                                &emsp;animation-timing-function:ease-in-out;<br>
-
-                                            }<br>
-                                            @keyframes forward {<br>
-                                                0% {<br>
-                                                    &emsp;left:0%;<br>
-                                                }<br>
-                                                100% {<br>
-                                                    &emsp;left:90%;<br>
-                                                }<br>
-                                            </code>
-                                </div>
-    
-        
-
-                        </figure>
-
-                    </div>
-                </section>
-                <!--semantic standalone element-->
-                <section class="main-section" id="bezier_curve">
-                    <header><h3>Bezier curve</h3></header>
-                    <div class="exTxt">
-                        <!--third in size/importance in header-->
-
-                        <p>The <code>cubic-bezier</code> function provides a way to custom design an animation timing function. 
-                            On a 1 by 1 xy plane, where x represents the % animation duration, and y represents the % animation progress,
-                            a Bezier curve is a cubic function that represents the animation progress over time. 
-                            It does so by defining 4 points, P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>. See below for a 
-                            visual representation of a Cubic-Bezier curve:
-                        </p>
-                        <div id="bezier_flex">
-                            <figure>
-                                <img src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main/res/img/bez_curve_sample.png" alt="example cubic-bezier curve" id ="bezier_img">
-                            </figure>
-                            <div>
-                            <p>P<sub>0</sub> and P<sub>3</sub> are fixed at (0,0) and (1,1) respectively. The Bezier curve is customized by modifying
-                                P<sub>1</sub> and P<sub>2</sub>.</p>
-                                <div class="lcode"><code>Syntax: animation-timing-function:cubic-bezier(P<sub>1x</sub>,P<sub>1y</sub>,x2,y2)</code></div>
-                            <p>where (x1,y1) and (x2,y2) are coordinates for P<sub>1</sub> P<sub>2</sub> respectively.</p>
-                            <p>Note how P<sub>1</sub> and P<sub>2</sub> are not on the curve directly, instead they serve as points that skews 
-                                the curve.</p>
-                                <p>Visit <a href="https://cubic-bezier.com" target="_blank">cubic-bezier.com</a> by Lea Verou to see cubic-bezier in action,
-                                 and to make some cubic-beziers yourself.</p>
-                                </div>
+                    <figure>
+                        <figcaption>duration: 8s</figcaption>
+                        <div class="bar">
+                            <span id="forward_8s"></span>
                         </div>
+                    </figure>
 
+                    <figure>
+                        <figcaption>duration: 4s</figcaption>
+                        <div class="bar">
+                            <span id="forward_4s"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>duration: 2s</figcaption>
+                        <div class="bar">
+                            <span id="forward_2s"></span>
+                        </div>
+                    </figure>
+                </figure>
+
+                <!--code-->
+                <figure class="codeblock">
+                    <!--title-->
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
+                            #forward_8s {<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:8s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-timing-function:linear;<br>
+                            }<br>
+                            #forward_4s {<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-timing-function:linear;<br>
+                            }<br>
+                            #forward_2s {<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:2s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-timing-function:linear;<br>
+                            }<br>
+                            @keyframes forward {<br>
+                                0% {<br>
+                                    &emsp;left:0%;<br>
+                                    &emsp;background-color:maroon;<br>
+                                }<br>
+                                100% {<br>
+                                    &emsp;left:90%;<br>
+                                    &emsp;background-color:yellow;<br>
+                                }<br>
+                            }<br>
+                        </code>
                     </div>
+                </figure>
+            </div>
+        </section>
 
-                </section>
-                <section class="main-section" id="animation_shorthand">
-                    <header><h3>animation shorthand</h3></header>
-                    <div class="exTxt">
-                        <!--third in size/importance in header-->
+        <!--animation-iteration-count-->
+        <section class="main-section" id="animation-iteration-count">
+            <header>
+                <h3>Animation-iteration-count</h3>
+            </header>
 
-                        <p>The <code>animation</code> shorthand property provides a quick way to set all of the animation properties
-                            mentioned above in one line.
-                        </p>
-                        <div class="lcode"><code>Syntax: animation: &lt;name&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt; 
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>animation-iteration-count</code> property defines how many times the
+                    animation plays before stopping.</p>
+                <p>The property can accept the following as input values: </p>
+                <ul>
+                    <li>infinite (animation runs until page is closed)</li>
+                    <li>positive decimal number (a decimal value means the animation runs for a fraction of the total
+                        duration)</li>
+                </ul>
+                <p>CSS uses a default value of 1 when no iteration count is specified.</p>
+                <p>Check out the animation below, and the accompanying code. Note the effect varying the value of the
+                    <code>animation-iteration-count</code> property has on the animation itself.
+                </p>
+            </div>
+
+            <!--sample code and live code-->
+            <div class="flex_exam_code" id="ex_iter">
+
+                <!--live code-->
+                <figure class="examblock" id="iter_hov_start">
+
+                    <!--title-->
+                    <figcaption>CSS Animation</figcaption>
+
+                    <figure>
+                        <figcaption>repeat: 1 time</figcaption>
+                        <div class="bar">
+                            <span id="rep_1_time"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>repeat: 3 times</figcaption>
+                        <div class="bar">
+                            <span id="rep_3_time"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>repeat: forever</figcaption>
+                        <div class="bar">
+                            <span id="rep_forever"></span>
+                        </div>
+                    </figure>
+                </figure>
+                <!--code-->
+                <figure class="codeblock">
+                    <!--title-->
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
+                        #rep_1_time {<br>
+                            &emsp;animation-name:forward;<br>
+                            &emsp;animation-duration:2s;<br>
+                            &emsp;animation-iteration-count:1;<br>
+                        }<br>
+                        #rep_3_time {<br>
+                            &emsp;animation-name:forward;<br>
+                            &emsp;animation-duration:2s;<br>
+                            &emsp;animation-iteration-count:3;<br>
+                        }<br>
+                        #rep_forever {<br>
+                            &emsp;animation-name:forward;<br>
+                            &emsp;animation-duration:2s;<br>
+                            &emsp;animation-iteration-count:infinite;<br>
+                        }<br>
+                        @keyframes forward {<br>
+                            0% {<br>
+                                &emsp;left:0%;<br>
+                            }<br>
+                            100% {<br>
+                                &emsp;left:90%;<br>
+                            }<br>
+                        }<br>
+                        </code>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!--animation-delay-->
+        <section class="main-section" id="animation-delay">
+            <header>
+                <h3>Animation-delay</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>animation-delay</code> property defines the delay for the start
+                    of the animation.</p>
+                <p>The property can accept time values with the units: </p>
+                <ul>
+                    <li>s (seconds)</li>
+                    <li>ms (milliseconds)</li>
+                </ul>
+                <p>CSS uses a default value of 0s when no delay is specified.</p>
+                <p>a negative time value tells the browser to immediately play the animation from x point onwards. </p>
+                <p>Check out the animation below, and the accompanying code. Note the effect varying the value of the
+                    <code>animation-delay</code> property has on the animation itself.
+                </p>
+            </div>
+
+            <!--sample code and live code-->
+            <div class="flex_exam_code" id="ex_delay">
+                <!--live code-->
+                <figure class="examblock" id="delay_hov_start">
+                    <!--title-->
+                    <figcaption>CSS Animation</figcaption>
+                    <div id="count_8s_down_int"></div>
+
+                    <figure>
+                        <figcaption>-2 second delay</figcaption>
+                        <div class="bar">
+                            <span id="anim_-2s_delay"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>No delay</figcaption>
+                        <div class="bar">
+                            <span id="anim_no_delay"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>2 second delay</figcaption>
+                        <div class="bar">
+                            <span id="anim_2s_delay"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>4 second delay</figcaption>
+                        <div class="bar">
+                            <span id="anim_4s_delay"></span>
+                        </div>
+                    </figure>
+                </figure>
+
+                <!--code-->
+                <figure class="codeblock">
+                    <!--title-->
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
+                            #anim_-2s_delay{<br>
+                                &emsp;animation-name:progress_bar;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-delay:-2s;<br>
+                            }<br>                                        
+                            #anim_no_delay{<br>
+                                &emsp;animation-name:progress_bar;<br>
+                                &emsp;animation-duration:4s;<br>
+                            }<br>
+                            #anim_2s_delay{<br>
+                                &emsp;animation-name:progress_bar;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-delay:2s;<br>
+                            }<br>
+                            #anim_4s_delay{<br>
+                                &emsp;animation-name:progress_bar;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-delay:4s;<br>
+                            }<br>
+                            @keyframes progress_bar {<br>
+                                0% {<br>
+                                    &emsp;width:0%;<br>
+                                }<br>
+                                100% {<br>
+                                    &emsp;width:100%;<br>
+                                }<br>
+                            }<br>
+                        </code>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!--animation-direction-->
+        <section class="main-section" id="animation-direction">
+            <header>
+                <h3>Animation-direction</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>animation-direction</code> property defines the direction of play
+                    of the animation.</p>
+                <p>The property can accept the following as input values: </p>
+                <ul>
+                    <li>normal (default)</li>
+                    <li>reverse</li>
+                    <li>alternate (first normal then reverse)</li>
+                    <li>alternate-reverse (first reverse then normal)</li>
+                </ul>
+                <p>Check out the animation below, and the accompanying code for examples of different input for
+                    <code>animation-direction</code> and their effects.
+                </p>
+            </div>
+
+            <!--sample code and live code-->
+            <div class="flex_exam_code" id="ex_dire">
+
+                <!--live code-->
+                <figure class="examblock">
+                    <!--title-->
+                    <figcaption>CSS Animation</figcaption>
+
+                    <figure>
+                        <figcaption>normal direction</figcaption>
+                        <div class="bar">
+                            <span id="anim_norm_dir"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>reverse direction</figcaption>
+                        <div class="bar">
+                            <span id="anim_rev_dir"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>alternating direction</figcaption>
+                        <div class="bar">
+                            <span id="anim_alt_dir"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>reverse alternating direction</figcaption>
+                        <div class="bar">
+                            <span id="anim_revalt_dir"></span>
+                        </div>
+                    </figure>
+                </figure>
+
+                <!--code-->
+                <figure class="codeblock">
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
+                            #anim_norm_dir{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-direction:normal;<br>
+                            }<br>
+                            #anim_rev_dir{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-direction:reverse;<br>
+                            }<br>
+                            #anim_alt_dir{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-direction:alternate;<br>
+                            }<br>
+                            #anim_revalt_dir{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-direction:alternate-reverse;<br>
+                            }<br>
+                            @keyframes forward {<br>
+                                0% {<br>
+                                    &emsp;left:0%;<br>
+                                }<br>
+                                100% {<br>
+                                    &emsp;left:90%;<br>
+                                }<br>
+                            }<br>
+                        </code>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!--animation-fill-mode-->
+        <section class="main-section" id="animation-fill-mode">
+            <header>
+                <h3>Animation-fill-mode</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>animation-fill-mode</code> property defines how the element containing the animation
+                    behaves when
+                    the animation is not playing.</p>
+                <p>The property can accept the following as input values: </p>
+                <ul>
+                    <li>none (default)</li>
+                    <li>forwards (container displays last keyframe executed when animation ends)</li>
+                    <li>backwards (container displays first keyframe executed before animation begins)</li>
+                    <li>both(both forwards and backwards)</li>
+                </ul>
+                <p>Check out the animation below, and the accompanying code for examples of different input for
+                    <code>animation-fill-mode</code> and their effects.
+                </p>
+            </div>
+
+            <!--sample & live code-->
+            <div class="flex_exam_code" id="ex_fill">
+
+                <!--live code-->
+                <figure class="examblock" id="fill_hov_start">
+                    <!--title-->
+                    <figcaption>CSS Animation</figcaption>
+
+                    <figure>
+                        <figcaption>element</figcaption>
+                        <div class="bar">
+                            <span id="anim_fill_none"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>first keyframe</figcaption>
+                        <div class="bar">
+                            <span id="anim_paused_first"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>last keyframe</figcaption>
+                        <div class="bar">
+                            <span id="anim_paused_last"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>fill mode:forward</figcaption>
+                        <div class="bar">
+                            <span id="anim_fill_forw"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>fill mode:backward</figcaption>
+                        <div class="bar">
+                            <span id="anim_fill_back"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>fill mode:both</figcaption>
+                        <div class="bar">
+                            <span id="anim_fill_both"></span>
+                        </div>
+                    </figure>
+                </figure>
+
+                <!--code-->
+                <figure class="codeblock">
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
+                            #anim_fill_forw{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:5s;<br>
+                                &emsp;animation-fill-mode:forwards;<br>
+                            }<br>
+                            #anim_fill_back{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:5s;<br>
+                                &emsp;animation-fill-mode:backwards;<br>
+                            }<br>
+                            #anim_fill_both{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:5s;<br>
+                                &emsp;animation-fill-mode:both;<br>
+                            }<br>
+                            @keyframes forward {<br>
+                                0% {<br>
+                                    &emsp;left:0%;<br>
+                                }<br>
+                                100% {<br>
+                                    &emsp;left:90%;<br>
+                                }<br>
+                            }<br>
+                        </code>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!--animation-play-state-->
+        <section class="main-section" id="animation-play-state">
+            <header>
+                <h3>Animation-play-state</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>animation-play-state</code> property tells the animated element if the
+                    animation should be running or paused.</p>
+                <p>The property can accept the following as input values: </p>
+                <ul>
+                    <li>running (default)</li>
+                    <li>paused</li>
+                </ul>
+                <p>note the lack of stop as a value.</p>
+                <p>Check out the animation below, and the accompanying code for examples of different input for
+                    <code>animation-play-state</code> and their effects.
+                </p>
+            </div>
+
+            <!--sample & live code-->
+            <div class="flex_exam_code" id="ex_play">
+
+                <!--live code-->
+                <figure class="examblock">
+                    <!--title-->
+                    <figcaption>CSS Animation</figcaption>
+                    <figure>
+                        <figcaption>paused</figcaption>
+                        <div class="bar">
+                            <span id="anim_play_pause"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>running</figcaption>
+                        <div class="bar">
+                            <span id="anim_play_run"></span>
+                        </div>
+                    </figure>
+                </figure>
+
+                <!--code-->
+                <figure class="codeblock">
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
+                            #anim_play_pause{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-play-state:paused;<br>
+                            }<br>
+                            #anim_play_run{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-play-state:running;<br>
+                            }<br>
+                            @keyframes forward {<br>
+                                0% {<br>
+                                    &emsp;left:0%;<br>
+                                }<br>
+                                100% {<br>
+                                    &emsp;left:90%;<br>
+                                }<br>
+                            }<br>
+                        </code>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!--animation-timing-function-->
+        <section class="main-section" id="animation-timing-function">
+            <header>
+                <h3>Animation-timing-function</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>the <code>animation-timing-function</code> property defines how the animation
+                    is played over the duration of the animation.</p>
+                <p>The property can accept the following as input values: </p>
+                <ul>
+                    <li>ease (default)</li>
+                    <li>linear</li>
+                    <li>ease-in</li>
+                    <li>ease-out</li>
+                    <li>ease-in-out</li>
+                </ul>
+                <p>When these pre-defined speeds are not what you want, you can specify your own using the
+                    <code>cubic-bezier</code> function.
+                </p>
+                <p>Check out the animation below, and the accompanying code for examples of different input for
+                    <code>animation-timing-function</code> and their effects.
+                </p>
+            </div>
+
+            <!--live & sample code-->
+            <div class="flex_exam_code" id="ex_time">
+
+                <!--live code-->
+                <figure class="examblock">
+                    <!--title-->
+                    <figcaption>CSS Animation</figcaption>
+                    <figure>
+                        <figcaption>ease (default)</figcaption>
+                        <div class="bar">
+                            <span id="anim_time_ease"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>linear</figcaption>
+                        <div class="bar">
+                            <span id="anim_time_line"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>ease-in</figcaption>
+                        <div class="bar">
+                            <span id="anim_time_ease_in"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>ease-out</figcaption>
+                        <div class="bar">
+                            <span id="anim_time_ease_out"></span>
+                        </div>
+                    </figure>
+
+                    <figure>
+                        <figcaption>ease-in-out</figcaption>
+                        <div class="bar">
+                            <span id="anim_time_ease_in_out"></span>
+                        </div>
+                    </figure>
+                </figure>
+
+                <!--code-->
+                <figure class="codeblock">
+
+                    <!--title-->
+                    <figcaption>CSS Animation Code</figcaption>
+                    <div class="lcode">
+                        <code>
+                            #anim_time_ease{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                            }<br>
+                            #anim_time_line{<br>
+                                 &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-timing-function:linear;<br>
+                            }<br>
+                            #anim_time_ease_in{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-timing-function:ease-in;<br>
+                            }<br>
+                            #anim_time_ease_out{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-timing-function:ease-out;<br>
+                            }<br>
+                            #anim_time_ease_in_out{<br>
+                                &emsp;animation-name:forward;<br>
+                                &emsp;animation-duration:4s;<br>
+                                &emsp;animation-iteration-count:infinite;<br>
+                                &emsp;animation-timing-function:ease-in-out;<br>
+                            }<br>
+                            @keyframes forward {<br>
+                                0% {<br>
+                                    &emsp;left:0%;<br>
+                                }<br>
+                                100% {<br>
+                                    &emsp;left:90%;<br>
+                                }<br>
+                            }<br>
+                        </code>
+                    </div>
+                </figure>
+            </div>
+        </section>
+
+        <!--bezier-curve-->
+        <section class="main-section" id="bezier_curve">
+            <header>
+                <h3>Bezier curve</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>cubic-bezier</code> function provides a way to custom design an animation timing function.
+                    On a 1 by 1 xy plane, where x represents the % animation duration, and y represents the % animation
+                    progress,
+                    a Bezier curve is a cubic function that represents the animation progress over time.
+                    It does so by defining 4 points, P<sub>0</sub>, P<sub>1</sub>, P<sub>2</sub>, and P<sub>3</sub>. See
+                    below for a
+                    visual representation of a Cubic-Bezier curve:
+                </p>
+
+                <!--detailed example complete with images-->
+                <div id="bezier_flex">
+                    <figure>
+                        <img src="https://raw.githubusercontent.com/MatchaCrisp/TechnicalPage.github.io/main/res/img/bez_curve_sample.png"
+                            alt="example cubic-bezier curve" id="bezier_img">
+                    </figure>
+                    <div>
+                        <p>P<sub>0</sub> and P<sub>3</sub> are fixed at (0,0) and (1,1) respectively. The Bezier curve
+                            is customized by modifying
+                            P<sub>1</sub> and P<sub>2</sub>.</p>
+                        <div class="lcode">
+                            <code>Syntax: animation-timing-function:cubic-bezier(P<sub>1x</sub>,P<sub>1y</sub>,x2,y2)</code>
+                        </div>
+                        <p>where (x1,y1) and (x2,y2) are coordinates for P<sub>1</sub> P<sub>2</sub> respectively.</p>
+                        <p>Note how P<sub>1</sub> and P<sub>2</sub> are not on the curve directly, instead they serve as
+                            points that skews
+                            the curve.</p>
+                        <p>Visit <a href="https://cubic-bezier.com" target="_blank">cubic-bezier.com</a> by Lea Verou to
+                            see cubic-bezier in action,
+                            and to make some cubic-beziers yourself.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!--animation-shorthand-->
+        <section class="main-section" id="animation_shorthand">
+            <header>
+                <h3>animation shorthand</h3>
+            </header>
+
+            <!--explanation-->
+            <div class="exTxt">
+                <p>The <code>animation</code> shorthand property provides a quick way to set all of the animation
+                    properties
+                    mentioned above in one line.
+                </p>
+                <div class="lcode"><code>Syntax: animation: &lt;name&gt; &lt;duration&gt; &lt;timing-function&gt; &lt;delay&gt; 
                             &lt;iteration-count&gt; &lt;direction&gt; &lt;fill-mode&gt; &lt;play-state&gt;
                         </code></div>
-                        <p>Being able to assign values to all 8 CSS properties in one makes for more compact and readable code.</p>
-
-
-                    </div>
-
-                </section>
-            </main>
-
-        <!--semantic footer-->
-        <footer>
-            <div>
-                <a href="#">About The Author</a>
+                <p>Being able to assign values to all 8 CSS properties in one makes for more compact and readable code.
+                </p>
             </div>
-            <div>
-                <a href="#">Submit Feedback</a>
-            </div>
-            <div>
-                <a href="#">Changelogs</a>
-            </div>
-        </footer>
-    </body>
+        </section>
+    </main>
+
+    <!--semantic footer-->
+    <footer>
+        <div>
+            <a href="#">About The Author</a>
+        </div>
+        <div>
+            <a href="#">Submit Feedback</a>
+        </div>
+        <div>
+            <a href="#">Changelogs</a>
+        </div>
+    </footer>
+</body>
+
 </html>
